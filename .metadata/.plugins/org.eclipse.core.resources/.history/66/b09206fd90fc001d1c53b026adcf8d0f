@@ -1,0 +1,18 @@
+package test;
+import java.sql.*;
+import java.util.*;
+public class Demo_Join_Practice 
+{
+	public static void main(String[] args) 
+	{
+		try
+		{
+			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","system","tiger");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}

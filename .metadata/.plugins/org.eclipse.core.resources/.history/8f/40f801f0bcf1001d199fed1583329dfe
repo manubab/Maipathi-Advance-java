@@ -1,0 +1,15 @@
+package maccess;
+
+import java.util.*;
+import java.sql.*;
+
+public class StudentDetails52 {
+	
+	static final String url="jdbc:oracle:thin:@localhost:1521:orcl";
+	static final String duname="System";
+	static final String dpswd="tiger";
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package maccess;
+import java.sql.*;
+public class DemoCon1 {
+
+	public static void main(String[] args) {
+		
+		try {
+			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","System","tiger");
+			
+		Statement smt=con.createStatement();		
+		ResultSet k=smt.executeQuery("insert into emp52 values('A333','Raju',AE',12000)");
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

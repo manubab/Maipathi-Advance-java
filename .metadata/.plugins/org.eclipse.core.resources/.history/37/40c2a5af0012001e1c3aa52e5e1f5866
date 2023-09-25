@@ -1,0 +1,22 @@
+package test;
+import java.sql.*;
+public class AddBookDAO 
+{
+	public int k=0;
+	
+	public int add(BookBean bb)
+	{
+		try
+		{
+			Connection con=DBConnection.getCon();
+			PreparedStatement ps=con.prepareStatement("insert into BookDetails52 values(?,?,?,?,?)");
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return k;
+	}
+
+}

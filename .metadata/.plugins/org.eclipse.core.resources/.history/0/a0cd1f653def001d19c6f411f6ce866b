@@ -1,0 +1,17 @@
+package maccess;
+import java.sql.*;
+public class DemoCon1 {
+	public static void main(String [] args)
+	{
+		try {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+		Connection con=DriverManager.getConnection("jabc:oracle:thin:@localhost:1521:orcl","System","tiger");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+}

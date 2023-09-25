@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="choice" method="post">
+Enter the value 1:<input type="text" name="v1"><br>
+Enter the value 2:<input type="text" name="v2"><br>
+<input type="submit" value="Add" name="s1">
+<input type="submit" value="Sub" name=s1>
+<input type="submit" value="Mul" name="s1">
+<input type="submit" value="Div" name="s1">
+<input type="submit" value="Mod div" name="s1">
+<input type="submit" value="Gre" name="s1">
+<inpiut type="submit" value="Sma" name="s1">
+</form>
+</body>
+</html>

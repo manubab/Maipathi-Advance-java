@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Servlet_Cookie_Session_Tracking&apos; to &apos;Servlet_App_Http_Session&apos;" description="Rename resource &apos;Servlet_Cookie_Session_Tracking&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Servlet_Cookie_Session_Tracking" name="Servlet_App_Http_Session" stamp="1687520771011" updateReferences="true"/>
+</session>

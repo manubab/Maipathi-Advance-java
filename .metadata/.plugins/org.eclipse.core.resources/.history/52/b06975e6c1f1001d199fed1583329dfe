@@ -1,0 +1,75 @@
+package maccess;
+
+import java.util.*;
+import java.sql.*;
+
+public class StudentDetails52 {
+	
+	static final String url="jdbc:oracle:thin:@localhost:1521:orcl";
+	static final String duname="System";
+	static final String dpswd="tiger";
+	public static void main(String[] args) {
+		
+		try {
+		Scanner sc=new Scanner(System.in);	
+		
+		Connection con=DriverManager.getConnection(url,duname,dpswd);
+		
+		PreparedStatement ps1=con.prepareStatement("insert into Student52Marks values(?,?,?,?,?,?)");
+		
+		PreparedStatement ps2=con.prepareStatement("insert into Student52 values(?,?,?,?,?)");
+		
+		
+		while(true)
+		{
+			System.out.println("==== choice ====="
+					+ "\n\t1.Add Student Details"
+					+ "\n\t2.view All Student Details"
+					+ "\n\t3.view Student by rollNo"
+					+ "\n\t4.exit"
+					+ "\nEnter choice:");
+			int choice=Integer.parseInt(sc.nextLine());
+			
+			switch(choice)
+			{
+			case 1:
+				System.out.println("Enter the rollNo:");
+				String rollNo=sc.nextLine();
+				System.out.println("Enter the name");
+				String name=sc.nextLine();
+				System.out.println("Enter the branch");
+				String branch=sc.nextLine();
+				
+				System.out.println("Read 6 subect marks :");
+				int i=1;
+				int totalMarks=0
+				while(i<=6)
+				{
+					System.out.println("Enter subject "+i+" marks:");
+					int marks=Integer.parseInt(sc.nextLine());
+					
+					totalMarks=totalMarks+marks;
+				}
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				System.out.println("OPeration stopped on StudentDetails tables....!");
+				System.exit(0);
+				break;
+			default:
+				System.out.println("invalid choice ...!");
+			}
+		} //loop closed
+		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+
+}

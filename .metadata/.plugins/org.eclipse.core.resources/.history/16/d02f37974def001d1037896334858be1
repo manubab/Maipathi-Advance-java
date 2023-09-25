@@ -1,0 +1,77 @@
+package test;
+
+import java.sql.*;
+import java.util.*;
+public class DemoPractice {
+	
+	public static void main(String[] args) {
+		
+		try {
+			Scanner sc=new Scanner(System.in);
+		Connection con=DriverManager.getConnection
+				
+	("jdbc:oracle:thin:@localhost:1521:orcl","System","tiger");
+		
+		
+		PreparedStatement ps1=con.prepareStatement("insert into BookDetails50(?,?,?,?)");
+		
+		PreparedStatement ps2=con.prepareStatement("select * from Bookdetails50");
+		
+		PreparedStatement ps3=con.prepareStatement("select * from Bookdetails50 where=?");
+		
+		PreparedStatement ps4=con.prepareStatement("update BookDetails50 set price=?,qty=qty+? where code=?");
+		
+		System.out.println("***** Choice *****");
+		
+		System.out.println("\t1.AddBookDetails"
+				+ "\n\t2.viewAllBookDetails"
+				+"\n\t3.viewBookByCode"
+				+ "\n\t4.UpdateBookDetails(price/qty"
+				+ "\n\t5.DeleteBookByCode"
+				+ "\n\t6.exit");
+		
+		
+		System.out.println("Enter choice :");
+		
+		int choice=Integer.parseInt(sc.nextLine());
+		
+		switch(choice)
+		{
+		case 1:
+			System.out.println("Enter the bookCode :");
+			String code=sc.nextLine();
+			System.out.println("Enter bookName :");
+			String name=sc.nextLine();
+			System.out.println("Enter author");
+			String author=sc.nextLine();
+			System.out.println("Enter BookPrice :");
+			float price=Float.parseFloat(sc.nextLine());
+			
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 5:
+			break;
+		case 6:
+			System.out.println("Operation Stopped :");
+			System.exit(0);
+			
+			default :
+				System.out.println("invaid choice...!");
+		}
+		
+		
+		
+		
+	
+		}
+		catch(SQLException se)
+		{
+			se.printStackTrace();
+			
+		}
+		}
+
+}

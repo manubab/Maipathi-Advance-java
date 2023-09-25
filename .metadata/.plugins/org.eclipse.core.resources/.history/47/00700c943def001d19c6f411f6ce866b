@@ -1,0 +1,22 @@
+package maccess;
+import java.sql.*;
+public class DemoCon1 {
+	public static void main(String [] args)
+	{
+		try {
+		Class.forName("oracle.jdbc.driver.OracleDriver");  // loading driver
+		
+		Connection con=DriverManager.getConnection("jabc:oracle:thin:@localhost:1521:orcl","System","tiger"); //create connection
+		
+		Statement stm=con.createStatement();  //create Statement 
+		
+		ResultSet rs=stm.executeQuery("select * from emp52");
+		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+}

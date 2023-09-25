@@ -1,0 +1,27 @@
+package test;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
+@WebServlet("/add")
+public class AddBookServlet extends HttpServlet
+{
+	protected void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException
+	{
+		res.setContentType("text/html");
+		PrintWriter pw=res.getWriter();
+		
+		HttpSession hs=req.getSession(false);
+		if(hs==null)
+		{
+			pw.print("Session Expaired.....<br>");
+		}
+		else
+		{
+			
+		}
+		
+	}
+	
+
+}

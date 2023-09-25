@@ -1,0 +1,13 @@
+package test;
+import java.sql.*;
+public class AddBookDAO 
+{
+	public int k=0;
+	
+	public int add(BookBean bb)
+	{
+		
+		return k;
+	}
+
+}

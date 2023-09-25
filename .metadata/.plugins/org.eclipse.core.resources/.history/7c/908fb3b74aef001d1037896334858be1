@@ -1,0 +1,22 @@
+package test;
+
+import java.sql.*;
+import java.util.*;
+public class DemoPractice {
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		try {
+		Connection con=DriverManager.getConnection
+				
+	("jdbc:oracle:thin:@localhost:1521:orcl","System","tiger");
+	
+		}
+		catch(SQLException se)
+		{
+			se.printStackTrace();
+			
+		}
+		}
+
+}

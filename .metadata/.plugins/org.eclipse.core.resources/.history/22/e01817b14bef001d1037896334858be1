@@ -1,0 +1,32 @@
+package test;
+
+import java.sql.*;
+import java.util.*;
+public class DemoPractice {
+	
+	public static void main(String[] args) {
+		
+		try {
+			Scanner sc=new Scanner(System.in);
+		Connection con=DriverManager.getConnection
+				
+	("jdbc:oracle:thin:@localhost:1521:orcl","System","tiger");
+		
+		
+		PreparedStatement ps1=con.prepareStatement("insert into BookDetails50(?,?,?,?)");
+		
+		PreparedStatement ps2=con.prepareStatement("select * from Bookdetails50");
+		
+		
+		
+		
+	
+		}
+		catch(SQLException se)
+		{
+			se.printStackTrace();
+			
+		}
+		}
+
+}
